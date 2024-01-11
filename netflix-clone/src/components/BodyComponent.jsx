@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { urlApi } from '../data/dati'
+
 import TrendingNComponent from './TrendingNComponent'
 import WatchAgainComponent from './WatchAgainComponent'
 import NewReleasesComponent from './NewReleasesComponent'
