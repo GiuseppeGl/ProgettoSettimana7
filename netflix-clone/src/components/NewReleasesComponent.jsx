@@ -16,17 +16,17 @@ export default class TrendingNowComp extends Component {
               throw new Error('Something went wrong');
             })
             .then((responseJson) => {
-              // Verifica se responseJson è già presente in objTrending
+              
               const isDouble = this.state.objT.some(item => item.imdbID === responseJson.imdbID);
       
-              // Aggiungi responseJson solo se non è un duplicato
+              
               if (!isDouble) {
                 this.setState((prevState) => ({
                   objT: [...prevState.objT, responseJson],
                 }));
               }
       
-              console.log(this.state);
+              
             })
             .catch((error) => {
               console.log(error);
@@ -35,7 +35,7 @@ export default class TrendingNowComp extends Component {
       }
       
     render() {
-        console.log(this.state)
+        
         return (
             this.state.objT.map((e, index) => (
               <div key={index} className="col mb-2 px-1">
